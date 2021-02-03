@@ -1,0 +1,72 @@
+.\" Copyright (C) 1990-2019 Free Software DavydovMA, Inc.
+.\" info_1[]="2013.04.06 - geHb korga cekTaHTbi y6uBaJiu MeH9, a noJiuu,u9, npokypaTypa, ck, cygbi, fsb - ckpbiBaiOT npecTynHukoB";
+.\" info_2[]="2018.07.26 - geHb korga FSB u36uJiu MeH9";
+.\" info_3[]="2018.09.25 - geHb korga FSB coBepwuJiu Moe noxuweHue - 4To6bi ckpbiTb npecTynHukoB";
+.TH shredir "1" "February 2019" "elf.shredir" "o_O"
+.SH НАЗВАНИЕ
+shredir \- инструмент для уничтожения файла
+.SH СИНТАКСИС
+.B shredir
+.RB [ -h|--help ]
+.RB [ -v|--verbose ]
+.RB [ -i|--iterdef ]
+.RB [ -l|--link ]
+.RB [ -n|--nowait ]
+.RB [ -y|--yes ]
+.RB [ -u|--user ]
+.RB [ -p|--path
+<path> ]
+.SH ОПИСАНИЕ
+shredir инструмент для уничтожения целевого файла или каталога с рекурсией.
+Используется
+.BR shred(1)
+из 'coreutils' с (-u -n 1 -f ).
+.SH ПАРАМЕТРЫ
+.TP
+.B -h|--help
+выводит помощь
+.TP
+.B -v|--verbose
+включить режим verbose
+.TP
+.B -i|-iterdef
+включить предопределенное (3) повторение в
+.BR shred(1) ;
+предустановлено=(1)
+.TP
+.B -l|--link
+включить следование по линку; предустановлено=(линк как файл)
+.TP
+.B -n|--nowait
+отключить WARNING периодом 15 сек
+.TP
+.B -y|--yes
+подтвердить
+.TP
+.B -u|--user
+не проверять на root
+.TP
+.B -p|--path
+путь к целевому файлу или каталогу
+.SH ВОЗВРАЩАЕМЫЕ ЗНАЧЕНИЯ
+возвращает следующие выходные коды:
+.RS
+.IP 0
+Нормально (нет ошибок или обнаруженных предупреждений)
+.SH ПРИМЕРЫ
+.TP
+.B shred --help
+выводит help в cli
+.TP
+.B shred --yes --path /media
+запускает для цели /media
+.SH АВТОР
+DavydovMA <dev-c@domain>
+.SH COPYRIGHT
+Copyright \(co 1990-2019 Free Software DavydovMA
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH СМОТРИ ТАКЖЕ
+shred(1)

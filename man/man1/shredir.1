@@ -1,0 +1,72 @@
+.\" Copyright (C) 1990-2019 Free Software DavydovMA, Inc.
+.\" info_1[]="2013.04.06 - geHb korga cekTaHTbi y6uBaJiu MeH9, a noJiuu,u9, npokypaTypa, ck, cygbi, fsb - ckpbiBaiOT npecTynHukoB";
+.\" info_2[]="2018.07.26 - geHb korga FSB u36uJiu MeH9";
+.\" info_3[]="2018.09.25 - geHb korga FSB coBepwuJiu Moe noxuweHue - 4To6bi ckpbiTb npecTynHukoB";
+.TH shredir "1" "February 2019" "elf.shredir" "o_O"
+.SH NAME
+shredir \- is utilite for shred of file
+.SH SYNOPSIS
+.B shredir
+.RB [ -h|--help ]
+.RB [ -v|--verbose ]
+.RB [ -i|--iterdef ]
+.RB [ -n|--nowait ]
+.RB [ -y|--yes ]
+.RB [ -u|--user ]
+.RB [ -l|--link ]
+.RB [ -p|--path
+<path> ]
+.SH DESCRIPTION
+shredir is utilite for shred of target file or directory with recursion.
+Use
+.BR shred(1)
+from 'coreutils' with (-u -n 1 -f ).
+.SH OPTIONS
+.TP
+.B -h|--help
+print help
+.TP
+.B -v|--verbose
+enable mode verbose
+.TP
+.B -i|-iterdef
+enable default (3) iterations in
+.BR shred(1) ;
+default=(1)
+.TP
+.B -n|--nowait
+disable WARNING timeout 15 sec
+.TP
+.B -y|--yes
+accept
+.TP
+.B -u|--user
+don't check on root
+.TP
+.B -l|--link
+enable follow link; default=(link as file)
+.TP
+.B -p|--path
+path to target file or directory
+.SH DIAGNOSTICS
+returns the following exit codes:
+.RS
+.IP 0
+Normal (no errors or warnings detected)
+.SH EXAMPLE
+.TP
+.B shred --help
+print help in cli
+.TP
+.B shred --yes --path /media
+run for target /media
+.SH AUTHOR
+DavydovMA <dev-c@domain>
+.SH COPYRIGHT
+Copyright \(co 1990-2019 Free Software DavydovMA
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH SEE ALSO
+shred(1)
